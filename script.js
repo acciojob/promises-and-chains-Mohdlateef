@@ -6,13 +6,25 @@ let name=document.getElementById("name");
 function resolve(e) {
 	e.preventDefault();
 	let b=name.value;
-	alert(b)
+	// alert(b)
 	let a=age.value;
-	let promise=new Promise((rest,resol)=>{
-		if(a>18)
-		{
-			
-		}
+	promise(a,b).then((data)=>{
+		alert(data);
+	}).catch((data)=>{alert(data)});
+	
 	})
 	
+}
+
+const promise=function(age,name){
+    let pr=new Promise((res,rej)=>{
+        if(age>18)
+        {
+            res(`Welcome ${name}. YOu can vote`);
+        }
+        else{
+            res(`Oh sorry ${name} you aren't old enough`);
+        }
+    })
+    return pr;
 }
