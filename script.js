@@ -26,7 +26,7 @@ const promise=function(age,name){
         }
 			else if(age<18)
 			{
-				res(`Oh sorry ${name}. You aren't old enough.);
+				res(`Oh sorry ${name}. You aren't old enough.`);
 			}
         
     })
