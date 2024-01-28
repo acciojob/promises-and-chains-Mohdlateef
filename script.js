@@ -22,7 +22,7 @@ const promise=function(age,name){
         }
         if(age>18)
         {
-            res(`Welcome, ${name}. You can vote`);
+            res(`Welcome, ${name}. You can vote.`);
         }
 			else if(age<18)
 			{
