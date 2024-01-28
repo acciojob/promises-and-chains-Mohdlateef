@@ -12,9 +12,8 @@ function resolve(e) {
 		alert(data);
 	}).catch((data)=>{alert(data)});
 	
-	})
+	}
 	
-}
 
 const promise=function(age,name){
     let pr=new Promise((res,rej)=>{
