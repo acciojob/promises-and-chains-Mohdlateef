@@ -17,6 +17,9 @@ function resolve(e) {
 
 const promise=function(age,name){
     let pr=new Promise((res,rej)=>{
+		if(!age){
+            rej(`Please enter valid details`)
+        }
         if(age>18)
         {
             res(`Welcome ${name}. YOu can vote`);
@@ -25,9 +28,7 @@ const promise=function(age,name){
 			{
 				res(`Oh sorry ${name} you aren't old enough`);
 			}
-        else{
-            rej(`Please enter valid details`)
-        }
+        
     })
     return pr;
 }
