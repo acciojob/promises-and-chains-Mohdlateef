@@ -21,8 +21,12 @@ const promise=function(age,name){
         {
             res(`Welcome ${name}. YOu can vote`);
         }
+			else if(age<18)
+			{
+				res(`Oh sorry ${name} you aren't old enough`);
+			}
         else{
-            res(`Oh sorry ${name} you aren't old enough`);
+            rej(`Please enter valid details`)
         }
     })
     return pr;
